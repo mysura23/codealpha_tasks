@@ -1,0 +1,28 @@
+# Gradle build files
+.gradle/
+build/
+out/
+bin/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Sensitive files & credentials
+*.env
+*.pem
+*.key
+*.p12
+*.crt
+secrets.json
+
+# Docker build logs & cache
+.docker/
