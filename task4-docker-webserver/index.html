@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha DevOps Internship - Task 4</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-card: #1e293b;
+            --accent-color: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8, #818cf8);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --success-color: #22c55e;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .header-bar {
+            background: var(--accent-gradient);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-bar h1 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .status-badge {
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid var(--success-color);
+            color: var(--success-color);
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--success-color);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.2); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .content {
+            padding: 2.5rem 2rem;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .info-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            padding: 1.25rem;
+            border-radius: 10px;
+        }
+
+        .info-card label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .info-card p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .footer {
+            padding: 1.25rem 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .tech-tags {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #334155;
+            color: #e2e8f0;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-bar">
+            <h1>CodeAlpha DevOps Internship</h1>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                Healthy & Operational
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 class="hero-title">Task 4 - Web Server using Docker</h2>
+            <p class="hero-subtitle">Containerized Nginx Web Server</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <label>Intern Name</label>
+                    <p>My name: Mysura Reddy</p>
+                </div>
+                <div class="info-card">
+                    <label>Technology Stack</label>
+                    <p>Nginx 1.25 (Alpine Linux)</p>
+                </div>
+                <div class="info-card">
+                    <label>Container Status</label>
+                    <p>Active (Port 8080:80)</p>
+                </div>
+                <div class="info-card">
+                    <label>Deployment Environment</label>
+                    <p>Docker & Docker Compose</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>CodeAlpha DevOps Internship Submission &copy; 2026 Mysura Reddy</p>
+            <div class="tech-tags">
+                <span class="tag">Docker</span>
+                <span class="tag">Nginx</span>
+                <span class="tag">Docker Compose</span>
+                <span class="tag">DevOps</span>
+                <span class="tag">HTML5/CSS3</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
